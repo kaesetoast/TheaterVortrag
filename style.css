@@ -22,6 +22,10 @@ cite {
 	margin: 0em 1em;
 	display: block;
 }
+.inline-cite {
+	margin: 0;
+	display: inline;
+}
 cite:before {
 	content: "\00BB";
 }
