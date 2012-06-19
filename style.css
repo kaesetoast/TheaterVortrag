@@ -17,6 +17,9 @@ body {
 	color: #eee;
 	counter-reset: slidenum;
 }
+cite {
+	font-family: Times, Times New Roman, serif;
+}
 .pik-slide {
 	font-size: 0.7em;
 	background: #FFF;
