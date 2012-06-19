@@ -16,20 +16,6 @@
             window.document.id('current-slide').set("text", window.parent.pik.getCurrent() + 1);
         });
     </script>
-    <style>
-        /* Fine tuning the Rickroll */
-        #Demo iframe {
-            border: none;
-            width: 70%;
-            height: 70%;
-            position: absolute;
-            top: 15%;
-            left: 15%;
-            right: 15%;
-            bottom: 15%;
-            z-index: 1337;
-        }
-    </style>
 </head>
 <body>
 
@@ -407,34 +393,34 @@
 <!-- #########################AUFFÜHRUNGEN################################# -->
 
 <div class="pik-slide">
-    <h2>Aktuelle Aufführung: Uraufführung</h2>
+    <h2>Aktuelle Aufführung: Radio (1947)</h2>
+    <ul>
+        <li>Erstaufführung als Hörspiel im NWDR</li>
+        <li>Aufgrund des großen Erfolges wird die Sendung am nächsten Tag wiederholt</li>
+        <li>Ida Ehre ist so begeistert, dass sie das Stück auf die Bühne bringen will</li>
+    </ul>
 </div>
 
 <div class="pik-slide">
-    <h2>Aktuelle Aufführung: Radio (1949)</h2>
+    <h2>Aktuelle Aufführung: Uraufführung</h2>
 </div>
 
-<div class="pik-slide" id="Demo">
+<div class="pik-slide" id="Hamburg">
     <h2>Aktuelle Aufführung: Hamburg</h2>
     <div class="center" style="width:640px; height:480px; background:url(loader.gif) center center no-repeat;"></div>
-    
-    <!-- <video id="hamburg" class="video-js vjs-default-skin" controls
-      preload="auto" width="640" height="264" poster="my_video_poster.png"
-      data-setup="{}">
-      <source src="assets/Trailer2.mp4" type='video/mp4'>
-    </video> -->
 </div>
 <script>
     window.addEvent('domready', function(){
-        $('Demo').addEvents({
+        $('Hamburg').addEvents({
             'slideactivate': function(){
-                this.getFirst().set('html', '<iframe width="640" height="480" src="http://www.youtube.com/embed/Y1g2Cx03L2I?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+                this.getFirst().set('html', '<div class="center"><div class="center"><video style="max-width: 100%; height: auto;" controls="controls"><source src="assets/Trailer2.mp4" type="video/mp4"></video></div></div>');
             },
             'slidedeactivate': function(){
                 this.getFirst().set('html', '');
             }
         });
-    });</script>
+    });
+</script>
 
 <div class="pik-slide">
     <h2>Aktuelle Aufführung: Bochum</h2>
