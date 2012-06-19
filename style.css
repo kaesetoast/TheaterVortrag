@@ -19,6 +19,14 @@ body {
 }
 cite {
 	font-family: Times, Times New Roman, serif;
+	margin: 0em 1em;
+	display: block;
+}
+cite:before {
+	content: "\00BB";
+}
+cite:after {
+	content: "\00AB";
 }
 .pik-slide {
 	font-size: 0.7em;
