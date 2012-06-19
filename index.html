@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Draußen vor der Tür</title>
+    <script src="../../lib/pik.js"></script>
+    <!-- Important - do not remove or rename! -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Change theme here -->
+    <script type="text/javascript">
+        window.addEvent('domready', function () {
+            document.id('total-slides').set("text", pik.slides.length);
+            document.id('current-slide').set("text", window.parent.pik.getCurrent() + 1);
+        });
+        window.parent.addEvent('hashchange', function () {
+            window.document.id('current-slide').set("text", window.parent.pik.getCurrent() + 1);
+        });
+    </script>
+    <style>
+        /* Fine tuning the Rickroll */
+        #Demo iframe {
+            border: none;
+            width: 70%;
+            height: 70%;
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            right: 15%;
+            bottom: 15%;
+            z-index: 1337;
+        }
+    </style>
+</head>
+<body>
+
+<!-- <div id="header"></div> -->
+
+<div id="Pik-hide"></div>
+<!-- Important - do not remove or rename! -->
+
+<div id="Pik-presentation-container"> <!-- Important - do not remove or rename! -->
+
+<div class="pik-slide">
+    <div class="center">
+        <div class="center">
+            <img src="assets/heimkehrer.jpg" style="width: 13em">
+        </div>
+    </div>
+</div>
+
+<div class="pik-slide">
+    <h1>Draußen<br>vor der Tür</h1>
+    <h2>Wolfgang Borchert</h2>
+</div>
+
+<div class="pik-slide">
+    <h2>Wolfgang Borchert</h2>
+    <img src="assets/borchert.jpg" style="position: absolute; right: 1em; top: 1em; width: 8.7em">
+    <ul class="chron">
+        <li>*<strong>20.05.1921</strong> in Hamburg, als Sohn eines<br>Volksschulehrers und einer Autorin</li>
+        <li><strong>1939:</strong> Beginn einer Buchhändlerlehre</li>
+        <li><strong>1940:</strong> Abbruch der Lehre zugunsten von<br><span>&nbsp;</span>Schauspielunterricht</li>
+        <li><strong>1941:</strong> Engagement als Schauspieler an der Landesbühne<br><span>&nbsp;</span>Ost-Hannover</li>
+    </ul>
+    <div class="pik-notes">Schönste Zeit seines Lebens</div>
+</div>
+
+<div class="pik-slide">
+    <h2>Wolfgang Borchert - Kriegszeit</h2>
+</div>
+
+<div class="pik-slide">
+    <h2>Inhalt</h2>
+</div>
+
+<div class="pik-slide">
+    <h2>Aktuelle Aufführung: Uraufführung</h2>
+</div>
+
+<div class="pik-slide">
+    <h2>Aktuelle Aufführung: Radio (1949)</h2>
+</div>
+
+<div class="pik-slide" id="Demo">
+    <h2>Aktuelle Aufführung: Hamburg</h2>
+    <div class="center" style="width:640px; height:480px; background:url(loader.gif) center center no-repeat;"></div>
+    
+    <!-- <video id="hamburg" class="video-js vjs-default-skin" controls
+      preload="auto" width="640" height="264" poster="my_video_poster.png"
+      data-setup="{}">
+      <source src="assets/Trailer2.mp4" type='video/mp4'>
+    </video> -->
+</div>
+<script>
+    window.addEvent('domready', function(){
+        $('Demo').addEvents({
+            'slideactivate': function(){
+                this.getFirst().set('html', '<iframe width="640" height="480" src="http://www.youtube.com/embed/Y1g2Cx03L2I?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+            },
+            'slidedeactivate': function(){
+                this.getFirst().set('html', '');
+            }
+        });
+    });</script>
+
+<div class="pik-slide">
+    <h2>Aktuelle Aufführung: Bochum</h2>
+</div>
+
+<div class="pik-slide">
+    <h2>Quellen</h2>
+    <ul>
+        <li>wikipedia.org, Suchwort "Draußen vor der Tür" [Stand: 19.06.2012]</li>
+        <li>Bibliothekssystem Universität Hamburg</li>
+        <li>Bildungsserver Hamburg</li>
+    </ul>
+</div>
+
+<div class="pik-slide">
+    <div class="center">
+        <div class="center">
+            <h1 class="between-title">Vielen Dank für die Aufmerksamkeit!</h1>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <table>
+        <tr>
+            <td>20.06.2012</td>
+            <td>Philipp Nowinski, Niels Garve</td>
+            <td><span id="current-slide"></span> / <span id="total-slides"></span></td>
+        </tr>
+    </table>
+</div>
+
+</div>
+<!-- End #Pik-presentation-container. Do not remove or rename! -->
+
+</body>
+</html>
