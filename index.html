@@ -418,10 +418,21 @@
     <cite>Und nach der Ursendung im Februar '47 stand das Telefon nicht still, so dass am nächsten Abend die Sendung wiederholt wurde schon, eine Programmänderung.</cite>
 </div>
 
-<div class="pik-slide">
-    <h2>Aktuelle Aufführung: Radio (1947)</h2>
-    <p>Hörbeispiel</p>
+<div class="pik-slide" id="radio">
+    <div style="width: 100%; height: 100%;"></div>
 </div>
+<script>
+window.addEvent('domready', function(){
+    $('radio').addEvents({
+        'slideactivate': function(){
+            this.getFirst().set('html', '<h2 style="position: absolute">Aktuelle Aufführung: Radio (1947)</h2><div class="center"><div class="center"><audio id="radio-audio" controls="controls"><source src="assets/urauffuehrung/hoerspiel.ogg" type="audio/ogg" /></audio></div></div>');
+            $('radio-audio').play();
+        },
+        'slidedeactivate': function(){
+            this.getFirst().set('html', '');
+        }
+    });
+});</script>
 
 <div class="pik-slide">
     <h2 style="position: absolute">Aktuelle Aufführung: Uraufführung</h2>
@@ -535,22 +546,24 @@
 </div>
 
 <div class="pik-slide">
-    <h2>Perceval - Bühnenbild</h2>
-    <ul>
-        <li>Die Zeit (07.04.2011)</li>
-        <cite>Ein Brack-Bühnenbild ist ein zum Raum gewordener einfacher Einfall, der einen Abend in seiner Wirkung zusammenfasst.</cite>
-    </ul>
+    <h2 style="position: absolute; opacity: 0.3">Perceval - Bühnenbild</h2>
+        <div class="center">
+            <div class="center">
+                <cite>Ein Brack-Bühnenbild ist ein zum Raum gewordener einfacher Einfall, der einen Abend in seiner Wirkung zusammenfasst.</cite>
+                <div class="cite-author">Die Zeit (07.04.2011)</div>
+            </div>
+        </div>
 </div>
 
 <div class="pik-slide">
     <h2>Perceval - Inszenierung</h2>
     <ul>
         <li>Beckmann eröffnet: allein, ohne Bühnenbild, mit minimalem Licht, lange sucht er einen Anfang. General-Pause.</li>
-        <li>Der Spiegel (03.04.2011)</li>
-        <cite>
-            Man spürt es in den ersten Minuten (...), wie Felix Knopp innerlich gegen das klassische, beinahe ikonische Bild anspielt, das Hans Quest in der Hamburger Uraufführung an den Kammerspielen seinerzeit lieferte. (...) ein Mann wie eine offene Wunde.
-        </cite>
     </ul>
+    <cite>
+        Man spürt es in den ersten Minuten (...), wie Felix Knopp innerlich gegen das klassische, beinahe ikonische Bild anspielt, das Hans Quest in der Hamburger Uraufführung an den Kammerspielen seinerzeit lieferte. (...) ein Mann wie eine offene Wunde.
+    </cite>
+    <div class="cite-author">Der Spiegel (03.04.2011)</div>
     <div class="pik-notes">
         <ul>
             <li>Beckmann (Felix Knopp)</li>
@@ -562,11 +575,11 @@
     <h2>Perceval - Inszenierung</h2>
     <ul>
         <li>auch im späteren Verlauf ändert sich dieses Bild nicht dramatisch</li>
-        <li>Die Zeit (07.04.2011)</li>
-        <cite>
-            Percevals Aufführung ist ein Theaterkonzert, in welchem der Schauspieler Felix Knopp (alsBeckmann) auf einer leeren Bühne steht (…). Er spricht Borcherts Text, die Dialoge und die Monologe, er wispert ihn, er heult ihn
-        </cite>
     </ul>
+    <cite>
+        Percevals Aufführung ist ein Theaterkonzert, in welchem der Schauspieler Felix Knopp (alsBeckmann) auf einer leeren Bühne steht (…). Er spricht Borcherts Text, die Dialoge und die Monologe, er wispert ihn, er heult ihn
+    </cite>
+    <div class="cite-author">Die Zeit (07.04.2011)</div>
     <div class="pik-notes">
         <ul>
             <li>Luk Perceval hat schon öfter versucht, Musiktheater zu inszenieren: Othello in München, Molière-Marathon in Salzburg. (Information ebenfalls aus der Zeit)</li>
@@ -732,14 +745,26 @@
     </ul>
 </div>
 
-<div class="pik-slide">
-    <h2>Perceval - Musik-Theater</h2>
-    src="assets/hamburg/schnapssong.mp4"
+<div class="pik-slide" id="schnaps">
+    <div style="width: 100%; height: 100%;"></div>
 </div>
+<script>
+window.addEvent('domready', function(){
+    $('schnaps').addEvents({
+        'slideactivate': function(){
+            var h = $('schnaps').getFirst().getSize().y - 50;
+            var w = $('schnaps').getFirst().getSize().x;
+            this.getFirst().set('html', '<div class="center"><video id="video-schnaps" height="' + h + '" width="' + w + '" controls="controls"><source src="assets/hamburg/schnapssong.mp4" type="video/mp4" /></video></div>');
+            $('video-schnaps').play();
+        },
+        'slidedeactivate': function(){
+            this.getFirst().set('html', '');
+        }
+    });
+});</script>
 
-<div class="pik-slide">
-    <h2>Perceval - Musik-Theater</h2>
-    src="assets/hamburg/trailer.mp4"
+<div class="pik-slide" id="hamburg-trailer">
+    <div style="width: 100%; height: 100%;"></div>
     <div class="pik-notes">
         <cite>
             Ich bin auf der Suche nach einem menschlichen Theater. Einem Theater, das nicht nur zeigt, wie monströs der Mensch ist, aber gleichzeitig auch, wie sehr er auf der Suche ist nach Liebe, nach Schutz. Und wie verletzbar und angreifbar der Mensch ist. Und wie wir eigentlich alle in unseren Sehnsüchten, in unseren Ängsten gleich sind. Wir sind alle Kinder von Vater und Mutter, also in dem Sinn ist das eine ewige archaische Ursituation.
@@ -747,6 +772,20 @@
         Luk Perceval
     </div>
 </div>
+<script>
+window.addEvent('domready', function(){
+    $('hamburg-trailer').addEvents({
+        'slideactivate': function(){
+            var h = $('hamburg-trailer').getFirst().getSize().y - 50;
+            var w = $('hamburg-trailer').getFirst().getSize().x;
+            this.getFirst().set('html', '<div class="center"><video id="video-hamburg-trailer" height="' + h + '" width="' + w + '" controls="controls"><source src="assets/hamburg/trailer.mp4" type="video/mp4" /></video></div>');
+            $('video-hamburg-trailer').play();
+        },
+        'slidedeactivate': function(){
+            this.getFirst().set('html', '');
+        }
+    });
+});</script>
 
 
 <!-- #########################BOCHUM################################# -->
@@ -836,10 +875,23 @@
     </ul>
 </div>
 
-<div class="pik-slide">
-    <h2>Bösch - Inszenierung</h2>
-    Video
+<div class="pik-slide" id="bochum-trailer">
+    <div style="width: 100%; height: 100%;"></div>
 </div>
+<script>
+window.addEvent('domready', function(){
+    $('bochum-trailer').addEvents({
+        'slideactivate': function(){
+            var h = $('bochum-trailer').getFirst().getSize().y - 50;
+            var w = $('bochum-trailer').getFirst().getSize().x;
+            this.getFirst().set('html', '<div class="center"><video id="video-bochum-trailer" height="' + h + '" width="' + w + '" controls="controls"><source src="assets/bochum/trailer.mp4" type="video/mp4" /></video></div>');
+            $('video-bochum-trailer').play();
+        },
+        'slidedeactivate': function(){
+            this.getFirst().set('html', '');
+        }
+    });
+});</script>
 
 <div class="pik-slide">
     <h2>Bösch - Inszenierung</h2>
@@ -875,9 +927,13 @@
 </div>
 
 <div class="pik-slide">
-    <h2>Bösch - Reaktion</h2>
-    <cite>Es fasziniert, wie Bösch diese Spielansätze aus Borcherts Stück herausarbeitet und sie zu einer Erzählung zusammenfügt. Die Darsteller erfüllen das Konzept mit beseeltem Spiel. Großer Beifall für die überwältigende Neubelebung eines tot geglaubten Textes.</cite>
-    <div class="cite-author">wa.de - Kultur NRW</div>
+    <h2 style="position: absolute; opacity: 0.3">Bösch - Reaktion</h2>
+    <div class="center">
+        <div class="center">
+            <cite>Es fasziniert, wie Bösch diese Spielansätze aus Borcherts Stück herausarbeitet und sie zu einer Erzählung zusammenfügt. Die Darsteller erfüllen das Konzept mit beseeltem Spiel. Großer Beifall für die überwältigende Neubelebung eines tot geglaubten Textes.</cite>
+            <div class="cite-author">wa.de - Kultur NRW</div>
+        </div>
+    </div>
 </div>
 
 <!-- #########################BERLIN################################# -->
@@ -914,19 +970,27 @@
 </div>
 
 <div class="pik-slide">
-    <h2>Lösch - Inszenierung</h2>
-    <cite>
-        Er (Borchert) spricht weder darüber, was die Soldaten gemacht haben, noch über andere Opfer als die deutschen Soldaten, und nur in ganz wenigen Andeutungen von den ermordeten Juden. Man kann mit Beckmann, der Hauptfigur, Mitleid haben, weil er traumatisiert aus dem Krieg zurückkehrt, aber man weiß nicht genau, was er da getan hat. Dieses Stück mit seiner präzisen Unschärfe vernebelt mehr als dass es erklärt. Den Deutschen hat es damals zumindest im Theater einen Neuanfang erlaubt.
-    </cite>
-    <div class="cite-author">-- Volker Lösch</div>
+    <h2 style="position: absolute; opacity: 0.3">Lösch - Inszenierung</h2>
+    <div class="center">
+        <div class="center">
+            <cite>
+                Er (Borchert) spricht weder darüber, was die Soldaten gemacht haben, noch über andere Opfer als die deutschen Soldaten, und nur in ganz wenigen Andeutungen von den ermordeten Juden. Man kann mit Beckmann, der Hauptfigur, Mitleid haben, weil er traumatisiert aus dem Krieg zurückkehrt, aber man weiß nicht genau, was er da getan hat. Dieses Stück mit seiner präzisen Unschärfe vernebelt mehr als dass es erklärt. Den Deutschen hat es damals zumindest im Theater einen Neuanfang erlaubt.
+            </cite>
+            <div class="cite-author">-- Volker Lösch</div>
+        </div>
+    </div>
 </div>
 
 <div class="pik-slide">
-    <h2>Lösch - Inszenierung</h2>
-    <cite>
-        Beckmann ist ein Musterbeispiel und Identifikationsangebot für alle Soldaten – auch für die, die jetzt aus Afghanistan heimkommen −, weil er sich zum Opfer und zum Mitläufer stilisiert: Befehl ist Befehl (...)
-    </cite>
-    <div class="cite-author">-- Volker Lösch</div>
+    <h2 style="position: absolute; opacity: 0.3">Lösch - Inszenierung</h2>
+    <div class="center">
+        <div class="center">
+            <cite>
+                Beckmann ist ein Musterbeispiel und Identifikationsangebot für alle Soldaten – auch für die, die jetzt aus Afghanistan heimkommen −, weil er sich zum Opfer und zum Mitläufer stilisiert: Befehl ist Befehl (...)
+            </cite>
+            <div class="cite-author">-- Volker Lösch</div>
+        </div>
+    </div>
 </div>
 
 <div class="pik-slide">
