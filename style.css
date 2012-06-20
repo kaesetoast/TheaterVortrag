@@ -32,6 +32,12 @@ cite:before {
 cite:after {
 	content: "\00AB";
 }
+.cite-author {
+	width: 100%;
+	text-align: right;
+	padding: 0em 3em;
+	font-size: 0.8em;
+}
 .pik-slide {
 	font-size: 0.7em;
 	background: #FFF;
