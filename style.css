@@ -102,6 +102,11 @@ cite:after {
 	transition: transform 450ms ease-in-out, visibility 450ms linear;
 }
 
+.sources-list li {
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+
 /* Typography */
 h1, h2, p, ul, ol, p, pre, table {
 	margin: 1em 4%;
